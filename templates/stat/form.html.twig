@@ -1,0 +1,37 @@
+{{ form_start(statForm) }}
+<div class="row">
+    <div class="col">
+        {{ form_row(statForm.entryDate) }}
+        {{ form_row(statForm.country) }}
+        {{ form_row(statForm.virus) }}
+    </div>
+    <div class="col">
+        {{ form_label(statForm.contaminated) }}
+        <div class="input-group mb-2">
+            {{ form_widget(statForm.contaminated) }}
+            <div class="input-group-append">
+                <div class="input-group-text">contaminés</div>
+            </div>
+        </div>
+
+        {{ form_label(statForm.healed) }}
+        <div class="input-group mb-2">
+            {{ form_widget(statForm.healed) }}
+            <div class="input-group-append">
+                <div class="input-group-text">soignés</div>
+            </div>
+        </div>
+
+        {{ form_label(statForm.zombified) }}
+        <div class="input-group mb-2">
+            {{ form_widget(statForm.zombified) }}
+            <div class="input-group-append">
+                <div class="input-group-text">zombifiés</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<button class="btn btn-secondary float-right">Ajouter</button>
+{{ form_end(statForm) }}
